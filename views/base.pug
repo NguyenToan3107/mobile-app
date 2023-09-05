@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        //- meta(http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.jsdelivr.net")
+        link(rel="icon" type="image/png" href="/img/icon-logo1.png" sizes="16x16")
+
+        link(rel="stylesheet" href="/css/overview.css")
+        link(rel="stylesheet" href="/css/header.css")
+        link(rel="stylesheet" href="/css/footer.css")
+        link(rel="stylesheet" href="/css/products.css")
+        link(rel="stylesheet" href="/css/detail-product.css")
+        link(rel="stylesheet" href="/css/sign.css")
+        link(rel="stylesheet" href="/css/account.css")
+        link(rel="stylesheet" href="/css/alert.css")
+        link(rel="stylesheet" href="/css/cart.css")
+        link(rel="stylesheet" href="/css/forgetPassword.css")
+        link(rel="stylesheet" href="/css/resetPassword.css")
+        link(rel="stylesheet" href="/css/error.css")
+        link(rel="stylesheet",  href="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
+        title #{title}
+    body
+        // HEADER
+        include _header
+
+        // CONTENT
+        block content
+            h1 hello
+
+        // FOOTER
+        include _footer
+        
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js")
+
+
+        script(src="/js/signup.js")
+        script(src="/js/login.js")
+        script(src="/js/logout.js")
+        script(src="/js/updateSettings.js")
+        script(src="/js/addCart.js")
+        script(src="/js/denied.js")
+        script(src="/js/productsOptions.js")
+        script(src="/js/forgetPass.js")
+        script(src="/js/resetPass.js")
+        script(src="/js/inputQuantity.js")
+        script(src="/js/addReviewOnUser.js")
+        script(src="/js/delReviewOnUser.js")
+        script(src="/js/displayHideReviews.js")
+

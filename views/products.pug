@@ -1,0 +1,50 @@
+
+extends base
+block content
+
+    section.products-page
+        .category-container
+            p ĐIỆN THOẠI NỔI BẬT NHẤT
+            .brand
+                a(href='/products/samsung').brand1 SAMSUNG
+                a(href='/products/apple').brand1 APPLE
+                a(href='/products/oppo').brand1 OPPO
+                a(href='/products/realme').brand1 REALME
+                a(href='/products/nokia').brand1 N0KIA
+                a(href='/products/xiaomi').brand1 XIAOMI
+        .products-link
+            a(href='/') Trang chủ 
+           
+            a(href='') Điện Thoại
+            
+            a(href='/products').title-phone All
+        .products-filter
+            p Lọc theo giá:
+            input.input-filter(type='number' placeholder='Nhập giá bạn muốn...')
+            a.btn-filter Lọc
+            a(href='/increase').btn-pin Tăng dần
+            a(href='/decrease').btn-pdes Giảm dần
+        .products-container
+            each mobile in mobiles
+                a(href=`/${mobile.slug}`)
+                    .product
+                        .product-img
+                            img(src=`/img/${mobile.category}/${mobile.imageCover}` alt='')
+                        a.product-title= mobile.name
+                        .product-price
+                            p.price-new= (mobile.newPrice * 1000000).toLocaleString()
+                            p.price-old= (mobile.oldPrice * 1000000).toLocaleString()
+                        p.product-desc
+                            | [HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ
+                        .product-star
+                            
+                            img(src='/img/icon-star.png' alt='')
+                            img(src='/img/icon-star.png' alt='')
+                            img(src='/img/icon-star.png' alt='')
+                            img(src='/img/icon-star.png' alt='')
+                        .product-love
+                            p Yêu thích
+                            img(src='/img/icon-love.png' alt='')
+    
+            
+        .pages Xem thêm 3107 sản phẩm

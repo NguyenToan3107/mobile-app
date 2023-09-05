@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  height: 120vh;
+}
+
+:root {
+  --gap: 10px;
+  --width-default: 1300px;
+}
+
+.container__cart {
+  margin-top: 120px;
+  /* margin-bottom: 200px; */
+}
+
+.cart__product {
+  margin-top: 300px;
+  width: 650px;
+  height: 160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.detail__cart .name a {
+  /* display: flex; */
+  color: #000;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.detail__cart {
+  display: block;
+}
+
+.detail__cart .price {
+  display: flex;
+}
+
+.detail__cart .price .newPrice {
+  color: red;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.detail__cart .price .oldPrice {
+  color: #707070;
+  text-decoration: line-through;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.detail__cart .description {
+  background-color: #fff;
+  font-size: 1.5rem;
+  /* box-shadow: 0 2px 2px #dc3545; */
+  border-radius: 3px;
+  color: #dc3545;
+  outline: none;
+  border: none;
+  border: #dc3545 1px solid;
+  padding: 2px 8px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: transform 0.1s;
+}
+
+.detail__cart .description:hover {
+  transform: translateY(1px);
+}
+
+.thumbnail {
+  width: 140px;
+  height: 140px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.quantityCart {
+  width: 50px;
+  height: 30px;
+}
+
+.remove img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.header__cart {
+  /* margin-top: 300px; */
+  display: flex;
+  justify-content: start;
+  margin: 0 auto;
+  width: 650px;
+  margin-bottom: 10px;
+}
+
+.header__cart .back a {
+  color: #dc3545;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header__cart .back a:hover {
+  text-decoration: underline;
+}
+
+.header__cart .title {
+  color: #dc3545;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 200px;
+}
+
+.payment {
+  position: fixed;
+  /* right: 50%; */
+  /* left: calc(50% - 100px); */
+  bottom: 0;
+  /* left: 0; */
+  right: 0;
+  width: 400px;
+  height: 170px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.payment .head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.payment .head .sumPrice {
+  color: #dc3545;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.payment .head .descrip {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.payment .payment__process {
+  width: 100%;
+  border: none;
+  background-color: #dc3545;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  height: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment .choice__product {
+  color: #dc3545;
+  height: 50px;
+  text-transform: uppercase;
+  background-color: #fff;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  border: 1px #dc3545 solid;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment .choice__product:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.no__products {
+  margin: 0 auto;
+  width: 650px;
+  height: 100px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no__products .image__sad img {
+  margin-bottom: 50px;
+  width: 60px;
+  height: 60px;
+}
+
+.no__products .descrip {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.no__products .back__products {
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.no__products .back__product:hover {
+  text-decoration: underline;
+}
+
+.no__user {
+  margin-top: 150px;
+}

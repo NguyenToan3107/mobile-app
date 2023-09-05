@@ -1,0 +1,53 @@
+extends baseCart
+
+block contentCart
+
+    if(user)
+        section.container__cart
+            .header__cart
+                p.back
+                    a(href='/') &lt; Trở về
+                p.title Giỏ hàng
+            if(user.mobiles.length !== 0)
+                each mobile in user.mobiles
+                    ul.cart__product(data-cart=`${mobile._id}`)
+                        .thumbnail
+                            a
+                                img(src=`/img/${mobile.category}/${mobile.imageCover}` alt='')
+                        .detail__cart
+                            .name
+                                a= `${mobile.name}`
+                            .price
+                                p.newPrice= (mobile.newPrice * 1000000).toLocaleString()
+                                p.oldPrice= (mobile.oldPrice * 1000000).toLocaleString()
+                            button.description Đăng ký mua bảo hiểm mở rộng
+                        .quantity
+                            input.quantityCart(type='number' step='1' value='1')
+                        .remove
+                            img.remove_product_in_cart(src='/img/icon-remove.png' alt='')
+            else 
+                .no__products
+                    .image__sad 
+                        img(src="/img/icon-sad.png")
+                    .descrip Không có sản phẩm nào trong giỏ hàng, vui lòng quay lại!
+                    a(href="/").back__products Quay lại trang chủ
+    else 
+        .no__products.no__user
+            .image__sad 
+                img(src="/img/icon-sad.png")
+            .descrip Không có sản phẩm nào trong giỏ hàng, vui lòng quay lại!
+            a(href="/").back__products Quay lại trang chủ
+
+    .payment
+        .head
+            p.descrip Tổng tiền tạm tính
+            if(user)
+                - const formattedSumPrice = sumPrice ? (sumPrice * 1000000).toLocaleString() : '0'
+                p.sumPrice= `${formattedSumPrice} đ`
+            else 
+                p.sumPrice 0 đ
+        button.payment__process
+            a Tiến hành thanh toán
+        br
+        a(href="/products").choice__product
+            p  Chọn thêm sản phẩm khác

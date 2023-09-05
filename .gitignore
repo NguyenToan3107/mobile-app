@@ -1,0 +1,6 @@
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
+.prettierrc
+yarn.lock
+vercel.json

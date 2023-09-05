@@ -1,0 +1,61 @@
+extends base
+
+mixin navItem(link, text, icon, active, classIcon)
+    li(class=`${active ? 'side-nav--active': ''} ${classIcon}`)
+        a(href=`${link}`).option__settings
+            img(src=`/img/icon-${icon}.png`)
+            | #{text}
+block content 
+    main.main
+        .user-view
+            nav.user-view__menu
+                ul.side-nav
+                    +navItem('', 'Cài đặt', 'settings', false, 'settings')
+                    +navItem('', 'Đơn đẫ đặt', 'briefcase', false, 'briefcase')
+                    +navItem('', 'Nhận xét', 'star-empty', false, 'star-empty')
+                    +navItem('', 'Đơn thanh toán', 'credit-card', false, 'credit-card')
+                    +navItem('#', 'Tắt trạng thái hoạt động', 'denied', false, 'denied')
+                
+                - if (user.role === 'admin')
+                    .admin-nav
+                        h5.admin-nav__heading Quản trị viên
+                        ul.side-nav
+                            +navItem('', 'Quản lý điện thoại', 'phone', false)
+                            +navItem('', 'Quản lý người đăng ký', 'accounts', false)
+                            +navItem('', 'Quản lý thông tin', 'star-empty', false)
+                            +navItem('', 'Quản lý đơn đặt hàng', 'briefcase', false)
+                    
+            .user-view__content
+                .user-view__form-container
+                    h2.heading-secondary.ma-bt-md Cài đặt tài khoản của bạn
+                    form.form.form-user-data
+                        .form__group
+                            label.form__label(for='name') Tên đăng nhập
+                            input#name.form__input(type='text', value=`${user.name}`, required)
+                        .form__group.ma-bt-md
+                            label.form__label(for='email') Email 
+                            input#email.form__input(type='email', value=`${user.email}`, required)
+                        .form__group.form__photo-upload
+                            img.form__user-photo(src=`/img/users/${user.photo}`, alt=`${user.name}`)
+
+                            input.form__upload(type='file', accept='image/*', id='photo', name='photo')
+                            label(for="photo") Chọn ảnh 
+
+                        .form__group.right
+                            button.btn.btn--small.btn--green Lưu
+                .line &nbsp;
+                .user-view__form-container
+                    h2.heading-secondary.ma-bt-md Thay đổi mật khẩu
+                    form.form.form-user-settings
+                        .form__group
+                            label.form__label(for='password-current') Mật khẩu hiện tại 
+                            input#password-current.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                        .form__group
+                            label.form__label(for='password') Mật khẩu mới
+                            input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                        .form__group.ma-bt-lg
+                            label.form__label(for='password-confirm') Xác nhận mật khẩu
+                            input#password-confirm.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                        .form__group.right
+                            button.btn.btn--small.btn--green.btn--save-password Lưu mật khẩu
+                button.btn.btn--small.btn--green.btn--logout Đăng xuất

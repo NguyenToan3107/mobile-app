@@ -1,0 +1,28 @@
+extends base
+
+block content
+
+    section.sign
+        #login.sign-in
+            .title
+                h1 Đăng nhập
+                h4 Thông tin đăng nhập của bạn
+            form(action='').formLogin
+                div
+                    input#email(type='email' name='email' placeholder='Email' required='')
+                p.error-username
+                div
+                    input#password(type='password' name='password' placeholder='Mật khẩu' required='')
+                p.error-password
+                .forgot
+                    .remmember
+                        input#remmember(type='checkbox' value='Remmember' name='Remmember')
+                        label(for='remmember') Remmember me
+                    a(href='/forgetPassword') Quên mật khẩu?
+                button#button1.button(role='button') Đăng nhập
+            br
+            p.or
+                | &minus;&minus;&minus;
+                span Hoặc
+                | &minus;&minus;&minus;
+            a.register(href='/signup') Bạn không có tài khoản?

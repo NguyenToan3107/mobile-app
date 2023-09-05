@@ -1,0 +1,187 @@
+header.header
+    .grid
+        .logo
+            a(href='/')
+                svg(version='1.0' xmlns='http://www.w3.org/2000/svg' width='200px' height='90px' viewbox='0 0 330.000000 150.000000' preserveaspectratio='xMidYMid meet')
+                    g(transform='translate(0.000000,150.000000) scale(0.100000,-0.100000)' fill='#fff' stroke='none')
+                        path(d='M414 1081 l-169 -97 0 -199 0 -199 169 -98 169 -97 46 27 c26 15 101\
+                        59 169 97 l121 70 0 200 0 200 -121 70 c-68 39 -143 82 -169 97 l-46 27 -169\
+                        -98z m156 -24 l0 -72 -150 -87 -151 -87 3 76 3 77 140 82 c77 45 143 83 148\
+                        83 4 1 7 -32 7 -72z m227 -40 l93 -52 0 -72 c0 -40 -3 -73 -7 -73 -3 0 -68 36\
+                        -145 81 l-138 81 0 74 0 74 53 -30 c28 -17 94 -54 144 -83z m-68 -148 c78 -44\
+                        141 -82 141 -84 0 -2 -64 -40 -142 -85 l-143 -82 -39 19 -39 19 111 63 c62 35\
+                        112 64 112 66 0 2 -50 31 -111 66 l-111 62 33 18 c19 10 37 18 40 19 4 0 70\
+                        -36 148 -81z m-153 -31 l92 -52 -95 -54 -95 -54 -34 18 c-38 21 -36 25 30 64\
+                        l45 26 -54 29 c-30 17 -55 32 -55 35 0 6 52 38 64 39 5 1 51 -22 102 -51z\
+                        m-166 -28 c22 -11 40 -22 40 -25 0 -3 -18 -14 -40 -25 l-40 -20 -39 22 -39 22\
+                        36 23 c21 12 38 23 40 23 1 0 21 -9 42 -20z m160 -297 c0 -40 -2 -73 -3 -73\
+                        -2 0 -69 37 -148 83 l-144 83 -3 77 -3 77 151 -87 150 -87 0 -73z m320 165 l0\
+                        -73 -93 -52 c-50 -29 -116 -66 -145 -83 l-53 -31 3 77 3 76 135 79 c74 43 138\
+                        79 143 79 4 0 7 -33 7 -72z')
+                        path(d='M1240 790 c0 -340 2 -390 15 -390 13 0 15 50 15 390 0 340 -2 390\
+                        -15 390 -13 0 -15 -50 -15 -390z')
+                        path(d='M1632 783 l2 -148 6 135 5 135 48 -82 c27 -46 54 -83 60 -83 7 0 32\
+                        37 57 82 l45 81 5 -134 c3 -74 8 -127 13 -118 11 22 4 272 -8 275 -5 2 -32\
+                        -37 -60 -86 -57 -103 -49 -104 -116 18 -22 39 -45 72 -50 72 -5 0 -8 -62 -7\
+                        -147z')
+                        path(d='M1979 902 c-59 -53 -58 -186 3 -237 42 -36 107 -35 148 3 65 58 60\
+                        196 -9 249 -9 7 -37 13 -63 13 -38 0 -54 -6 -79 -28z m125 7 c39 -18 59 -71\
+                        54 -142 -4 -52 -9 -64 -36 -88 -50 -45 -116 -35 -153 23 -16 27 -19 46 -16 97\
+                        3 57 7 67 35 92 35 31 74 37 116 18z')
+                        path(d='M2242 788 l3 -143 56 -3 c70 -4 110 23 111 76 1 33 -25 72 -49 72 -7\
+                        0 -13 5 -13 10 0 6 4 10 9 10 18 0 41 32 41 56 0 43 -33 64 -100 64 l-61 0 3\
+                        -142z m128 112 c25 -25 25 -45 2 -68 -19 -19 -96 -37 -113 -27 -10 7 -13 98\
+                        -2 108 15 16 93 7 113 -13z m4 -131 c32 -25 35 -68 5 -95 -14 -13 -36 -18 -72\
+                        -19 l-52 0 -3 68 -3 67 49 0 c35 0 57 -6 76 -21z')
+                        path(d='M2490 785 c0 -95 4 -144 10 -140 6 4 10 62 10 140 0 78 -4 136 -10\
+                        140 -6 4 -10 -45 -10 -140z')
+                        path(d='M2605 790 l0 -145 78 -3 c48 -2 77 1 77 8 0 6 -30 10 -75 10 l-74 0\
+                        -4 138 -3 137 1 -145z')
+                        path(d='M2832 788 l3 -143 78 -3 c53 -2 77 1 72 8 -3 5 -37 10 -76 10 l-69 0\
+                        0 65 0 65 73 2 72 2 -70 5 -70 6 0 55 0 55 75 6 75 5 -83 2 -83 2 3 -142z')
+        .input
+            input.search-input(type='text' placeholder='Hôm nay bạn cần tìm gì?' required='')
+            a.btn-search.btn-handle-router(href='#search')
+                img(src='/img/icon-search.png' alt='img')
+        .header-right
+            a.header-service(href='')
+                .header-service__svg
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 30.83 30.94' width='24' height='24')
+                        defs
+                            style.
+                                .cls-1 {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 2.2px;
+                                }
+                        g#Layer_2(data-name='Layer 2')
+                            g#Layer_1-2(data-name='Layer 1')
+                                path.cls-1(d='M6.78,20.27a31,31,0,0,0,10.29,8.06A15.91,15.91,0,0,0,22.82,30h.41a4.77,4.77,0,0,0,3.7-1.59,0,0,0,0,0,0,0,14.62,14.62,0,0,1,1.17-1.2c.28-.28.57-.56.85-.85A2.91,2.91,0,0,0,29,22L25.33,18.4a2.94,2.94,0,0,0-2.13-1,3.07,3.07,0,0,0-2.15,1l-2.16,2.17c-.2-.12-.4-.22-.6-.32a6.74,6.74,0,0,1-.66-.36,22.82,22.82,0,0,1-5.47-5A13.11,13.11,0,0,1,10.32,12c.56-.52,1.09-1.05,1.61-1.58l.55-.56a3.07,3.07,0,0,0,1-2.17,3.08,3.08,0,0,0-1-2.18l-1.8-1.8L10.07,3c-.4-.41-.82-.83-1.23-1.21A3,3,0,0,0,6.72.9a3.07,3.07,0,0,0-2.15.94L2.31,4.09a4.64,4.64,0,0,0-1.38,3,11.09,11.09,0,0,0,.84,4.83,28.11,28.11,0,0,0,5,8.37Z')
+                .header-service__text
+                    p.title
+                        | Gọi mua hàng
+                        br
+                        span 1800.3107
+            a.header-service(href='https://cellphones.com.vn/dia-chi-cua-hang' target= '_blank')
+                .header-service__svg
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 23.22 30.36' width='25' height='25')
+                        defs
+                            style.
+                                .cls-1 {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 1.8px;
+                                }
+                        g#Layer_2(data-name='Layer 2')
+                            g#Layer_1-2(data-name='Layer 1')
+                                path.cls-1(d='M11.61.9A10.77,10.77,0,0,0,.9,11.69C.9,20.14,10.6,28.87,11,29.23a.87.87,0,0,0,1.18,0c.42-.36,10.12-9.09,10.12-17.54A10.77,10.77,0,0,0,11.61.9Z')
+                                path.cls-1(d='M11.61,16.35a4.74,4.74,0,1,1,4.74-4.74,4.75,4.75,0,0,1-4.74,4.74Z')
+                .header-service__text
+                    p.title
+                        | Cửa hàng
+                        br
+                        |                 gần đây
+            a.header-service(href='https://cellphones.com.vn/tra-cuu-don-hang-online' target= '_blank')
+                .header-service__svg
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 44.22 25.85' height='24')
+                        defs
+                            style.
+                                .cls-1,
+                                .cls-2,
+                                .cls-3 {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                }
+                                .cls-1 {
+                                stroke-width: 1.66px;
+                                }
+                                .cls-2 {
+                                stroke-width: 1.66px;
+                                }
+                                .cls-3 {
+                                stroke-width: 1.8px;
+                                }
+                        g#Layer_2(data-name='Layer 2')
+                            g#Layer_1-2(data-name='Layer 1')
+                                circle.cls-1(cx='7.66' cy='22.02' r='3')
+                                circle.cls-2(cx='24.79' cy='22.02' r='3')
+                                path.cls-3(d='M28.61,22h4.13a1.44,1.44,0,0,0,1.44-1.44v-6')
+                                path.cls-3(d='M27.12.9H14.82a1.44,1.44,0,0,0-1.44,1.44V20.58A1.44,1.44,0,0,0,14.82,22h6.29')
+                                path.cls-3(d='M10.27,5.92H6.75A2.65,2.65,0,0,0,4.54,7.11L1.33,12A2.64,2.64,0,0,0,.9,13.47v6.46A2.1,2.1,0,0,0,3,22h.75')
+                                path.cls-3(d='M34.18,3.47V2.34A1.44,1.44,0,0,0,32.74.9H25.08')
+                                line.cls-3(x1='43.32' y1='6.97' x2='32.57' y2='6.97')
+                                line.cls-3(x1='40.5' y1='11.05' x2='32.57' y2='11.05')
+                                line.cls-3(x1='42.09' y1='16.33' x2='38.07' y2='16.33')
+                .header-service__text
+                    p.title
+                        | Tra cứu
+                        br
+                        |                 đơn hàng
+            a.header-service.btn-handle-router(href='/cart')
+                .header-service__svg
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 28.95 35.07' width='25' height='25')
+                        defs
+                            style.
+                                .cls-1 {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 1.8px;
+                                }
+                        g#Layer_2(data-name='Layer 2')
+                            g#Layer_1-2(data-name='Layer 1')
+                                path.cls-1(d='M10,10.54V5.35A4.44,4.44,0,0,1,14.47.9h0a4.45,4.45,0,0,1,4.45,4.45v5.19')
+                                path.cls-1(d='M23.47,34.17h-18A4.58,4.58,0,0,1,.91,29.24L2.5,8.78A1.44,1.44,0,0,1,3.94,7.46H25a1.43,1.43,0,0,1,1.43,1.32L28,29.24A4.57,4.57,0,0,1,23.47,34.17Z')
+                .header-service__text
+                    p.title
+                        | Giỏ
+                        br
+                        |                hàng
+            a.header-service.header-service__product.btn-handle-router(href='products')
+                .header-service__svg
+                    svg#Layer_1(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewbox='0 0 20.5 20.5' style='enable-background: new 0 0 20.5 20.5' xml:space='preserve')
+                        style(type='text/css').
+                            .st0 {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 1.07;
+                            stroke-miterlimit: 10;
+                            }
+                            .st1 {
+                            fill: #fff;
+                            }
+                        g#Layer_2_1_
+                            g#Layer_1-2
+                                path.st0(d='M6.4,0.5h7.7c0.9,0,1.7,0.8,1.7,1.7v16c0,0.9-0.8,1.7-1.7,1.7H6.4c-0.9,0-1.7-0.8-1.7-1.7v-16\
+                                C4.7,1.3,5.5,0.5,6.4,0.5z')
+                                path.st1(d='M7.8,0.3h5.4l0,0v1.2c0,0.3-0.3,0.5-0.5,0.5c0,0,0,0,0,0H8.3C8,2,7.8,1.8,7.8,1.5l0,0\
+                                C7.8,1.5,7.8,0.3,7.8,0.3z')
+                .header-service__text
+                    p.title
+                        | Sản
+                        br
+                        |                 phẩm
+            // no login
+
+            if (user) 
+                a.header-service.header-service__dn.btn-handle-router(for='header-cart_check' href='/account')
+                    img(src=`/img/users/${user.photo}` all="default")
+                    .header-service__text
+                        p.title= user.name.split(' ')[0]
+            else 
+                a.nav__el(href='/login') Log in
+                a.nav__el.nav__el--cta(href='/signup') Sign up          
+            // login
+            a.header-service.no-login(href='')
+                .header-service__text
+                    ion-icon.user-icon(name='person-circle-outline')
+                    p.name-user
+           
+

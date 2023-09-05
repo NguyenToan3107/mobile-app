@@ -1,0 +1,29 @@
+extends base
+
+block content
+
+    section.sign
+        #register.sign-up
+            .title
+                h1 Đăng ký
+                h4 Thông tin đăng ký của bạn
+            form.formSignUp(action='')
+                div
+                    input#email(type='text' name='email' placeholder='Email' required='')
+                div
+                    input#username(type='text' name='username' placeholder='Tên đăng nhập' required='' minlength='8')
+                div
+                    input#password(type='password' name='password' placeholder='Mật khẩu' required='' minlength='8')
+                div
+                    input#passwordConfirm(type='password' name='password' placeholder='Nhập lại mật khẩu' required='' minlength='8')
+                .accept
+                    input#private(type='checkbox' value='private' name='private')
+                    label(for='private') Tôi đồng ý với các điều khoản về quyền riêng tư.
+                .accept
+                    input#sale(type='checkbox' value='sale' name='sale' required='')
+                    label(for='sale') Đăng ký nhận bản tin khuyến mại qua email.
+                button#button2.button Đăng ký
+            br
+            p
+                | Bạn đã có tài khoản chưa?
+                a.login(href='/login') Nhập nhập ngay
