@@ -1,0 +1,139 @@
+extends base
+
+mixin imageSub(category, image)
+    .small-img-col
+        img.small-img.small-1(src=`/img/${category}/${image}` width='80px' height='auto' alt='')
+
+block content
+
+
+    section.container
+        a(href="/products").back_Detail_Product < Trở về
+        .row.mt-5.product__id(data-mobile=`${mobile._id}`)
+            .col-img
+                img.big-img(src=`/img/${mobile.category}/${mobile.imageCover}` width='100%' height='auto' alt='')
+                .small-img-group
+                    each img in mobile.images
+                        +imageSub(mobile.category, img)
+
+
+            .col-info
+                h2.brand= mobile.name
+                .price-detail
+                    p.price-new__detail= (mobile.newPrice * 1000000).toLocaleString()
+                    p.price-old__detail= (mobile.oldPrice * 1000000).toLocaleString()
+
+                .quantity_mobile 
+                    h2.quantity_mobile_title Số lượng
+                    .buttons_added
+                        input.minus.is-form(type="button", value="-")
+                        input.input-qty(aria-label="quantity", max="10", min="1", type="number", value="1")
+                        input.plus.is-form(type="button", value="+")
+
+
+                .product-details
+                    .product-advanced
+                        h4 Tính năng nổi bật
+                        ul
+                            each fea in mobile.feature
+                                li=  fea
+
+                    .product-tech
+                        h4 Thông số kỹ thuật của máy
+                        ul
+                            li
+                                strong Công nghệ màn hình: 
+                                span= mobile.screenTechnology
+                            li
+                                strong Độ phân giải : 
+                                span= mobile.resolution
+                            li
+                                strong Màn hình rộng :
+                                span= `${mobile.wideScreen} inch`
+                            li
+                                strong Hệ điều hành : 
+                                span= mobile.operatingSystem
+                            li
+                                strong Chip xử lý (CPU) : 
+                                span= mobile.cpu
+                            li
+                                strong Bộ nhớ trong (ROM) : 
+                                span= `${mobile.memoryInternal} GB`
+                            li
+                                strong RAM : 
+                                span= `${mobile.ram} RAM`
+                            li
+                                strong Mạng di động :
+                                span= mobile.network
+                            li
+                                strong Số khe sim :
+                                span= mobile.numberOfSimSlots
+                            li
+                                strong Dung lượng pin :
+                                span= `${mobile.capacity} mAh`
+                .amount_buy
+                    //- input.input(type='number' value='1')
+                    a.button.button__cart Thêm vào giỏ hàng
+
+    .products-container
+        each mob in mobilesOfDetail
+            a(href=`/${mob.slug}`)
+                .product
+                    .product-img
+                        img(src=`/img/${mob.category}/${mob.imageCover}` alt='')
+                    a.product-title= mob.name
+                    .product-price
+                        p.price-new= (mob.newPrice * 1000000).toLocaleString()
+                        p.price-old= (mob.oldPrice * 1000000).toLocaleString()
+                    p.product-desc
+                        | [HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ
+                    .product-star
+
+                        img(src='/img/icon-star.png' alt='')
+                        img(src='/img/icon-star.png' alt='')
+                        img(src='/img/icon-star.png' alt='')
+                        img(src='/img/icon-star.png' alt='')
+                    .product-love
+                        p Yêu thích
+                        img(src='/img/icon-love.png' alt='')
+    .space_detail
+        if(mobile)
+            #comments-container
+                h1 Đánh giá của bạn về sản phẩm
+                each review, i  in reviewOnMobile
+                    ul#comments-list(data-review=`${review._id}` class= (i > 2) ? 'hidden-review' : '')
+                        li.comment
+                            .comment-content
+                                each userReview in review.user
+                                    img.avatar(src=`/img/users/${userReview.photo}`, alt="User Avatar")
+                                    .comment-details
+                                        .author= userReview.name
+                                        .comment-text= review.review
+                                        .comment-actions
+                                            button.like-button
+                                                img(src="/img/icon-like.png")
+                                                | Thích
+                                            button.share-button
+                                                img(src="/img/icon-share.png")
+                                                | Chia sẻ
+                                            if(user)
+                                                if(user.name == userReview.name)
+                                                    button.delete-button
+                                                        img(src="/img/icon-trash.png")
+                                                        | Xóa
+                                                       
+                button.showMoreButton Hiển thị thêm
+                button.showLessButton.hidden-review Thu gọn
+                                        
+                                           
+
+
+                form#comment-form
+                    if(user)
+                        .text
+                            img.avatar(src=`/img/users/${user.photo}`, alt="User Avatar")
+                            textarea#comment-input(placeholder="Viết bình luận...", required)
+                        button.btnReview(type="submit") Gửi
+                    else 
+                        p.no_comment Bạn cần đăng nhập để có thể đáng giá sản phẩm.
+                        p.no_comment (Nếu bạn chưa có tài khoản hãy đăng ký để nhận nhiều ưu đãi.🧑‍🎄)

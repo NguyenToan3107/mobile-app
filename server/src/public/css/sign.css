@@ -1,0 +1,208 @@
+.sign {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 700px;
+  background: #ec6f66;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f3a183, #ec6f66);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f3a183, #ec6f66);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* margin-bottom: 30px; */
+}
+
+/*  sign in */
+
+.sign-in {
+  margin-top: 20px;
+  width: 400px;
+  height: 600px;
+  background-color: #fcfcfc;
+  border-radius: 26px;
+  padding: 60px 72px 60px 72px;
+  margin-bottom: 100px;
+}
+
+.sign-in h1,
+h4 {
+  text-align: center;
+}
+
+.sign-in h1 {
+  font-size: 36px;
+  color: #d70018;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.sign-in h4 {
+  font-size: 12px;
+  color: #333;
+  font-family: 'ItalicRoboto';
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+form input {
+  border-radius: 8px;
+  border: #ccc solid 1px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.button {
+  font-size: 15px;
+  width: 100%;
+  /* margin: 10px; */
+  margin-bottom: 0px;
+  margin-top: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-color: #d70018;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #b32434;
+}
+
+.sign-in a {
+  color: #d70018;
+  text-decoration: none;
+  /* margin: auto; */
+}
+
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: italic;
+  padding: 4px;
+}
+
+.forgot a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #333;
+}
+
+.forgot input {
+  width: 20px;
+  height: 20px;
+}
+
+.forgot label {
+  color: #333;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.forgot .remmember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.or {
+  text-align: center;
+  margin-top: 12px;
+}
+
+/*<==============Sign up===============>*/
+
+.sign-up {
+  top: 100px;
+  width: 800px;
+  height: 650px;
+  background-color: #fcfcfc;
+  border-radius: 26px;
+  padding: 60px 72px 60px 72px;
+  margin-bottom: 30px;
+}
+
+.sign-up h1,
+h4 {
+  text-align: center;
+}
+
+.sign-up h1 {
+  font-size: 36px;
+  color: #d70018;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.sign-up h4 {
+  font-size: 12px;
+  color: #333;
+  font-family: 'ItalicRoboto';
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+
+.sign-up a {
+  color: #d70018;
+  text-decoration: none;
+}
+
+.sign-up a span {
+  color: #ccc;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+.sign-up label {
+  color: #757575;
+  font-size: 11px;
+  /* margin-bottom: 16px; */
+}
+
+.sign-up input {
+  accent-color: #d70018;
+}
+
+.form .accept {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+}
+
+.accept input {
+  height: 15px;
+  max-width: 20px;
+}
+
+.sign-up p {
+  color: #7777;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sign-up p a {
+  text-decoration: none;
+  color: #5b86e5;
+}
+
+.register:focus {
+  color: black;
+}
+
+.login:focus {
+  color: black;
+}

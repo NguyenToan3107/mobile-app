@@ -1,0 +1,48 @@
+section
+    #login.sign-in
+        .title
+            h1 Đăng nhập
+            h4 Thông tin đăng nhập của bạn
+        form(action='')
+            div
+                input#username(type='text' name='username' placeholder='Username' required='')
+            p.error-username
+            div
+                input#password(type='password' name='password' placeholder='Password' required='')
+            p.error-password
+        .forgot
+            .remmember
+                input#remmember(type='checkbox' value='Remmember' name='Remmember')
+                label(for='remmember') Remmember me
+            a(href='') Quên mật khẩu?
+        button#button1.button(role='button') Đăng nhập
+        br
+        p.or
+            | &minus;&minus;&minus;
+            span Ho&#x1EB7;c
+            | &minus;&minus;&minus;
+        a.register(href='#register') Bạn không có tài khoản?
+    #register.sign-up
+        .title
+            h1 Đăng ký;
+            h4 Thông tin đăng ký của bạn
+        form(action='')
+            div
+                input#email(type='text' name='email' placeholder='Email' required='')
+            div
+                input#username(type='text' name='username' placeholder='Tên đăng nhập' required='')
+            div
+                input#password(type='password' name='password' placeholder='Mật khẩu' required='' minlength='8')
+            div
+                input#password(type='password' name='password' placeholder='Nhập lại mật khẩu' required='' minlength='8')
+        .accept
+            input#private(type='checkbox' value='private' name='private')
+            label(for='private') Tôi đồng ý với các điều khoản về quyền riêng tư.
+        .accept
+            input#sale(type='checkbox' value='sale' name='sale' required='')
+            label(for='sale') Đăng ký nhận bản tin khuyến mại qua email.
+        button#button2.button Đăng ký;
+        br
+        p
+            | Bạn đã có tài khoản chưa?
+            a.login(href='#') Nhập nhập ngay
